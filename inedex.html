@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lebenslauf - David Lecjaks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #0f192a;
+            color: #fff;
+            line-height: 1.7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 30px;
+            border: 2px solid #00ffff;
         }
 
         .left-column {
@@ -30,32 +36,35 @@
             flex-direction: column;
             align-items: center;
             padding-right: 20px;
-            border-right: 1px solid #ddd;
+            border-right: 2px solid #00ffff;
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border: 3px solid #ff4655;
         }
 
         .contact-info {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .contact-info h1 {
-            font-size: 2em;
-            color: #007bff;
-            margin-bottom: 5px;
+            font-size: 3em;
+            color: #00ffff;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
         }
 
         .contact-info p {
-            margin: 5px 0;
-            color: #555;
+            margin: 10px 0;
+            color: #eee;
+            font-size: 1.2em;
         }
 
         .right-column {
@@ -63,41 +72,85 @@
         }
 
         h2 {
-            font-size: 1.8em;
-            color: #007bff;
+            font-size: 2.5em;
+            color: #ff4655;
             margin-top: 0;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            border-bottom: 2px solid #ff4655;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-shadow: 0 0 5px rgba(255, 70, 85, 0.8);
         }
 
         h3 {
-            font-size: 1.2em;
-            margin-top: 15px;
-            color: #333;
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #fff;
         }
 
         .section {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .skills-list, .experience-list, .qualifications-list, .interests-list {
             padding-left: 20px;
             list-style-type: disc;
+            font-size: 1.2em;
         }
 
         .experience-item {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .experience-item h4 {
             font-weight: bold;
-            margin-bottom: 5px;
-            color: #333;
+            margin-bottom: 10px;
+            color: #ddd;
         }
 
         .experience-item p {
-            color: #555;
+            color: #bbb;
+            font-style: italic;
+        }
+
+        .italic-quote {
+            font-style: italic;
+            color: #aaa;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.3em;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .valorant-line {
+            position: relative;
+            height: 4px;
+            background: linear-gradient(to right, #00ffff, #ff4655);
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .valorant-line::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: translateX(-50%) scale(1);
+            }
+            to {
+                transform: translateX(-50%) scale(1.4);
+            }
         }
     </style>
 </head>
@@ -109,11 +162,11 @@
                 <h1>David Lecjaks</h1>
                 <p>lecjaksdavid@gmail.com</p>
             </div>
-            <p style="font-style: italic; color: #777; text-align: center;">Ich finde IT faszinierend, weil es die Zukunft beeinflusst.</p>
+            <p class="italic-quote">"Ich finde IT faszinierend, weil es die Zukunft beeinflusst."</p>
         </div>
         <div class="right-column">
             <div class="section">
-                <h2>Über mich</h2>
+                <h2>Über Mich</h2>
                 <p>Ich bin davon überzeugt, dass KI die Welt verändern wird und ich möchte ein Teil davon sein.</p>
             </div>
 
@@ -142,7 +195,7 @@
                         <h4>Berufspraktische Tage 2</h4>
                         <p>Bei XYZ, 24. bis 28. Feb. 2025</p>
                     </li>
-                    </ul>
+                </ul>
             </div>
 
             <div class="section">
@@ -158,8 +211,9 @@
                 <h2>Interessen und Hobbys</h2>
                 <ul class="interests-list">
                     <li>Ich spiele gerne Basketball mit Freunden</li>
-                    </ul>
+                </ul>
             </div>
+            <div class="valorant-line"></div>
         </div>
     </div>
 </body>
